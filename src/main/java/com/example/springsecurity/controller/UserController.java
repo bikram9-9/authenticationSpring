@@ -5,6 +5,7 @@ import com.example.springsecurity.models.AuthenticationResponse;
 import com.example.springsecurity.security.CustomDetailsService;
 import com.example.springsecurity.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -28,7 +29,7 @@ public class UserController {
 
     @GetMapping("hello")
     public String returnHello(){
-        return "Hello World";
+        return "Hello";
     }
 
     @PostMapping("/authenticate")
